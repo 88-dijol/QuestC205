@@ -65,13 +65,21 @@ pseudo: routine test
 9. swap two numbers.
 
 
-pseudo: 
+pseudocode:routine
+function swapTwoNumbers(num1 , num2){
+    temp = num1
+    num1 = num2
+    num2 = temp
+    print (num1 , num2)
+}
 
-    Input num1
-    Input num2 
+pseudocode:routine test
+function testswapingpTwoNumbers(){
+    input num1
+    input num2
+    swapTwoNumbers(num1 , num2)
+}
 
-     
-    Print square
 ===========================================================================================================
 			
 28. to check nubmer is divisible by 3.
@@ -128,12 +136,9 @@ pseudo: routine test
         else 
             print "Not Divisible By 27"
 
-===================================================================================================
-14. to print N natural numbers
 ====================================================================================
 
-1. to check a number palindrome. Sarika 
-
+1. to check a number palindrome.
 psuedo:
 
 	Input num
@@ -170,7 +175,7 @@ function isArmstrongNumber(num){
     while temp > 0 do
       rem = tem % 10
       sum = sum + rem ^ no_of_digits
-      temp = temp ?10
+      temp = temp //10
 
     if sum == num
       return true
@@ -185,9 +190,7 @@ function testIsArmstrongNumber(){
       print("the given number is armstrong")
     else
       print("the given number is not armstrong)
-}
-
-	
+}	
 ======================================================================	
 3. to check a number prime.
 pseudo : routine
@@ -217,7 +220,6 @@ function testIsPrimeNumber(){
     else
       print("the number is not prime)
 }
-====================================================================
 
 ==========================================================================================================
 17. to check number is odd or even.
@@ -302,43 +304,9 @@ function testIsPerfectNumber(){
       print("not perfect number")
 }
 
-pseudo: test routine in the driver code / main function 
-function __Main__(){
-    testIsPerfectNumber()
-}
 =============================================================================================
 
-5. Reverse the number.
- int lastDigit = n % 10;
-        reversedNumber = (reversedNumber * 10) + lastDigit;
-        return ReverseNumberUsingRecursion(n / 10, reversedNumber);
-pseudo:
-	
-	Input num
-	reversedNumber=0
-	lastnum=num%10
-	reversedNumber = 	(reversedNumber * 10) + lastDigit;
-	return ReverseNumberUsingRecursion(n / 10, reversedNumber);
- 
-6. Factorials of the number. Ashna
-4. Fibonacci. Gladsy, Anurag 
 
-22. to print prime numbers between in the limit. Shilpa 
-
-
-12. to find an element from the array. Gopika
-13. to find the largest number from array. Mohammed Riza 
-24. to sort the elements in the array. Alan
-8. to find sum of n numbers. Yahkoob, Aaryaka
-10. to display the duplicate numbers in the array. Girish.
-
-
-16. to check string anagram. 
-
- 
-23. to find length of the string. Nivya 
-25. to delete duplicates strings in sting list. Roshith 
-==============================================================================================================
 
 
 
