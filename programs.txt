@@ -154,13 +154,16 @@ Function IsPalindrome(num)
 		reversed=(reversed*10)+remainder
 		value=value//10
 	end while
-	return (number==reversed)
-
+	
+    	if reversed == num
+       		return true
+    	else
+      		 return false
 pseudo: routine test
 
 Function CheckPalindromeorNot()
 	Input num
-	if CheckPalindromeorNot(num)
+	if IsPalindrome(num)
 		print "is palindrome"
 	else	
 		print "is not palindrome"
