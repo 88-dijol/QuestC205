@@ -1,0 +1,345 @@
+19) to find average of two numbers
+
+psuedo:
+
+	Input num1
+	Input num2
+	sum = num1+num2
+	average=sum/2
+	print average
+
+pseudo: routine 
+
+	Function AverageofTwoNum(num1,num2)
+			sum=num1+num2
+			average=sum/2
+			return average
+
+pseudo: routine test
+
+	function TestFindAverage()
+			Input num1
+			Input num2
+			average= AverageofTwoNum(num1,num2)
+			print(average)
+======================================================================================================
+20. to find cube of number.
+
+pseudo: 
+
+    Input num 
+    cube = num * num * num 
+    Print cube 
+
+pseudo: routine 
+    Function FindCube(num)
+        cube = num * num * num 
+        Return cube 
+
+pseudo: routine test
+    Procedure TestFindCube()
+        Input num 
+        cube = FindCube(num)
+        Print cube 
+===============================================================================================================
+
+15. to find square of the number.
+
+pseudo: 
+
+    Input num 
+    cube = num * num  
+    Print square
+
+pseudo: routine 
+    Function FindSquare(num)
+        square = num * num  
+        Return square 
+	
+pseudo: routine test
+    Procedure TestFindSquare()
+        Input num 
+        square = FindSquare(num)
+        Print square
+==========================================================================================================================
+9. swap two numbers.
+
+
+pseudo: 
+
+    Input num1
+    Input num2 
+
+     
+    Print square
+===========================================================================================================
+			
+28. to check nubmer is divisible by 3.
+
+psuedo:
+
+	Input num
+	if num % 3==0
+		print("divisible by 3")
+	else
+		print("not divisible by 3")
+
+
+pseudo: routine 
+    function IsDivisibleBy3(num)
+        if num % 3 == 0
+            return True 
+        else 
+            return False 
+        
+
+pseudo: routine test 
+    function TestIsDivisibleBy3()
+        input num 
+        if IsDivisibleBy3(num)
+            print "Divisible By 3"
+        else 
+            print "Not Divisible By 3"
+==================================================================================================================================
+11. number divisible by 27.
+
+psuedo:
+
+	Input num
+	if num % 27==0
+		print("divisible by 27")
+	else
+		print("not divisible by 27")
+
+
+pseudo: routine 
+    function IsDivisibleBy27(num)
+        if num % 27 == 0
+            return True 
+        else 
+            return False 
+        
+
+pseudo: routine test 
+    function TestIsDivisibleBy27()
+        input num 
+        if IsDivisibleBy27(num)
+            print "Divisible By 27"
+        else 
+            print "Not Divisible By 27"
+
+===================================================================================================
+14. to print N natural numbers
+====================================================================================
+
+1. to check a number palindrome. Sarika 
+
+psuedo:
+
+	Input num
+
+pseudo: routine 
+
+Function IsPalindrome(num)
+
+	set reversed=0
+	set value=num
+	while(value!=0)
+		remainder=value%10
+		reversed=(reversed*10)+remainder
+		value=value//10
+	end while
+	return (number==reversed)
+
+pseudo: routine test
+
+Function CheckPalindromeorNot()
+	Input num
+	if CheckPalindromeorNot(num)
+		print "is palindrome"
+	else	
+		print "is not palindrome"
+
+
+=============================================================================================
+2. to check a number amstrong.
+
+function isArmstrongNumber(num){
+    temp = num
+    sum = 0
+    while temp > 0 do
+      rem = tem % 10
+      sum = sum + rem ^ no_of_digits
+      temp = temp ?10
+
+    if sum == num
+      return true
+    else
+      return false
+}
+
+pseudo :routine test:
+function testIsArmstrongNumber(){
+    input num
+    if isArmstrongNumber(num)
+      print("the given number is armstrong")
+    else
+      print("the given number is not armstrong)
+}
+
+	
+======================================================================	
+3. to check a number prime.
+pseudo : routine
+
+function isPrimeNumber(num)
+{
+    isPrime = 1
+    if num ==2
+      return true
+    for i from 2 to n/2 do
+      if num % i ==0
+        isPrime = 0
+        break
+    isPrime = 1
+
+    if isPrime ==1
+      return true
+    else
+      return false
+}
+
+pseudo test routine:
+function testIsPrimeNumber(){
+    input num
+    if isPrimeNumber(num)
+      print("the number is prime")
+    else
+      print("the number is not prime)
+}
+====================================================================
+
+==========================================================================================================
+17. to check number is odd or even.
+
+psuedo:
+
+	Input num
+	if num % 2==0
+		print("num is even")
+	else
+		print("num is odd")
+
+
+pseudo: routine 
+    function IsOddorEven(num)
+        if num % 2 == 0
+            return True 
+        else 
+            return False 
+        
+
+pseudo: routine test 
+    function TestIsOddorEven()
+        input num 
+        if IsOddorEven(num)
+            print "num is even"
+        else 
+            print "num is odd"
+========================================================================================================================================
+
+
+18. to check a year leap. 
+
+
+psuedo:
+
+	Input year
+	if ((year%4==0 && year%100!==0) || (year%400==0 && year%100==0))
+		print("year is a leap year")
+	else
+		print("year is not a leap year")
+
+
+pseudo: routine 
+    function IsLeaporNot(year)
+        if ((year%4==0 && year%100!==0) || (year%400==0 && year%100==0))
+            return True 
+        else 
+            return False 
+        
+
+pseudo: routine test 
+    function TestIsLeaporNot()
+        input num 
+        if IsLeaporNot(year)
+            print "year is a leap year"
+        else 
+            print "year is not a leap year"
+
+=====================================================================================================
+21. to check a number perfect square or not.
+pseudo : routine
+function isPerfectNumber(num){
+    sum = 0
+    temp = n
+    for i from 1 to n-1 do
+      if temp % i ==0
+         sum = sum + i
+
+    if sum == n
+      return true
+    else 
+      return false
+}
+
+pseudo: routine test
+function testIsPerfectNumber(){
+    input num
+    if isPerfectNumber(num)
+      print("perfect number)
+    else
+      print("not perfect number")
+}
+
+pseudo: test routine in the driver code / main function 
+function __Main__(){
+    testIsPerfectNumber()
+}
+=============================================================================================
+
+5. Reverse the number.
+ int lastDigit = n % 10;
+        reversedNumber = (reversedNumber * 10) + lastDigit;
+        return ReverseNumberUsingRecursion(n / 10, reversedNumber);
+pseudo:
+	
+	Input num
+	reversedNumber=0
+	lastnum=num%10
+	reversedNumber = 	(reversedNumber * 10) + lastDigit;
+	return ReverseNumberUsingRecursion(n / 10, reversedNumber);
+ 
+6. Factorials of the number. Ashna
+4. Fibonacci. Gladsy, Anurag 
+
+22. to print prime numbers between in the limit. Shilpa 
+
+
+12. to find an element from the array. Gopika
+13. to find the largest number from array. Mohammed Riza 
+24. to sort the elements in the array. Alan
+8. to find sum of n numbers. Yahkoob, Aaryaka
+10. to display the duplicate numbers in the array. Girish.
+
+
+16. to check string anagram. 
+
+ 
+23. to find length of the string. Nivya 
+25. to delete duplicates strings in sting list. Roshith 
+==============================================================================================================
+
+
+
+
