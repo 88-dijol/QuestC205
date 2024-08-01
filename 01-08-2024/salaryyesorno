@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prgm1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the Salary of doctor:");
+            int Salary = int.Parse(Console.ReadLine());
+                if(IsDoctorSalaryMin6Digits(Salary))
+                {
+                    Console.WriteLine("Doctor is having salary of 6 digit");
+                }
+                else
+                {
+                    Console.WriteLine("Doctor doesnt have 6 digit salary");
+
+                }
+            Console.ReadKey();
+           
+        }
+
+        
+            static bool IsDoctorSalaryMin6Digits( int Salary)
+            {
+                
+                int count = 0;
+                while ( Salary > 0)
+                {
+                    int digit = Salary % 10;
+                    count += 1;
+                    Salary = Salary / 10;
+                    
+                }
+                return count >=6;
+            }
+           
+
+        }
+    }
+

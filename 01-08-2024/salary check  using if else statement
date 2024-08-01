@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LearnCSharp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the doctor salary");
+            int Salary =int.Parse(Console.ReadLine());
+            if (IsDoctorSalaryMin6Digits(Salary))
+            {
+                Console.WriteLine("The doctor is having 6 digit number");
+                
+            }
+            else
+            {
+                Console.WriteLine("The doctor salary is less than 6 digit");
+            }
+        }
+        static bool IsDoctorSalaryMin6Digits(int Salary)
+        {
+            if (Salary > 99999)
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+}
+        
+
+
+     
+    
