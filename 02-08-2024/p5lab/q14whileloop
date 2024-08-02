@@ -1,0 +1,59 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace p5q14usingforloop
+{
+    internal class Program
+    {
+
+        static int Fibinocci(int N)
+        {
+            int firstterm = 0;
+            int secondterm = 1;
+            int thirdterm;
+            Console.WriteLine($"{firstterm}");
+            Console.WriteLine($"{secondterm}");
+
+            int i = 1;
+            while ( i <= N)
+            {
+                if (i == N)
+                {
+                    break;
+                }
+
+                thirdterm = firstterm + secondterm;
+                Console.WriteLine($"{thirdterm}");
+                firstterm = secondterm;
+                secondterm = thirdterm;
+                i++;
+            }
+           
+            return secondterm;
+
+        }
+
+        static void TestFibinocci()
+        {
+            Console.Write("Enter number of terms:");
+            int N = int.Parse(Console.ReadLine());
+            Console.Write("Series: ");
+            int nthterm = Fibinocci(N);
+            Console.WriteLine();
+        }
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("--------------Fibinocci.--------------");
+            TestFibinocci();
+            Console.WriteLine("--------------Fibinocci...--------------");
+            Console.WriteLine("Press any key to contine...");
+            Console.ReadKey();
+        }
+    }
+}
