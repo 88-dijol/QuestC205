@@ -1,0 +1,44 @@
+using System;
+
+namespace q18
+{
+    internal class Program
+    {
+        static void PrintNumTriangle(int N)
+        {
+            int I = 1;
+            do
+            {
+                int J = 1;
+                do
+                {
+                    Console.Write("  "); //2 spaces
+                    J++;
+                } while (J <= N - I);
+                J = N;
+                do
+                {
+                    Console.Write($"{J} ");//num and space
+                    J--;
+                } while (J > N - I);
+                Console.WriteLine();//new line
+                I++;
+            } while (I <= N);
+        }
+
+        static void TestPrintNumTriangle()
+        {
+            Console.Write("Enter number of lines:");
+            int N = int.Parse(Console.ReadLine());
+            PrintNumTriangle(N);
+        }
+        static void Main(string[] args) //user: p
+        {
+            Console.WriteLine("-----Pattern printing using do-while-----");
+            TestPrintNumTriangle();
+            Console.WriteLine("-----End-----");
+            Console.WriteLine("Press any key to contine...");
+            Console.ReadKey();
+        }
+    }
+}
