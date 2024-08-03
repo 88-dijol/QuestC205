@@ -1,1 +1,47 @@
 
+read salaries till zero
+find max of salaries
+
+
+
+
+ function ReadSalaryTillZero()
+
+		Input salary
+	
+		maxsalary=0
+
+		while salary!=0
+
+			if (salary<0)
+
+				print "invalid salary"
+
+				input salary
+
+				continue
+
+			endif
+
+			if salary > maxsalary
+
+				maxsalary=salary
+
+				input salary
+
+			endif
+
+
+		endwhile
+
+		print maxsalary
+
+
+			
+
+
+			
+		
+		
+			
+		 
