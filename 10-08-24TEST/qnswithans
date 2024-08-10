@@ -18,8 +18,11 @@ DepartmentID INT
 ans:
 
   SELECT d.DepartmentID,d.DepartmentName 
+
   FROM Departments as d LEFT JOIN Employees as e
+
   on d.DepartmentID = e.DepartmentID
+
   WHERE e.EmployeeID IS NULL;
 
 
@@ -32,9 +35,13 @@ find the day with the highest total sales.
 ANS:
 
 	SELECT SaleDate,SUM(SaleAmount) AS TotalSales
+
       FROM Sales
+
       GROUPBY SalesDate
+
       ORDERBY TotalSales DESC 
+
       LIMIT 1;
 =====================================================================
 3.Find the Average Salary by Department
@@ -53,7 +60,9 @@ Salary DECIMAL(10, 2)
 
 ans:
 	SELECT  DepartmentID , AVG(Salary) AS AverageSalary
+
 	FROM Employees
+
 	GROUP BY  DepartmentID;
 ====================================================================================
 
@@ -65,7 +74,9 @@ calculate the average sales amount per customer.
 
 ANS: 
     SELECT CustomerID ,AVG(SaleAmount) AS  AverageSales
+
     FROM Orders
+
     GROUP BY CustomerID;
 =======================================================================================
 5.Find Customers with No Orders in the Last Year
@@ -74,8 +85,12 @@ find customers who have not placed any orders in the last year.
 
 ANS:
 
-	SELECT c.CustomerID 
+	SELECT DISTINCT c.CustomerID
+ 
       FROM Customers  as c LEFT JOIN  Orders as o
-      on c.CustomerID =o.CustomerID AND 
-      o.OrderDate >= DATEADD(year,-1,GETDATE())
+
+      on c.CustomerID = o.CustomerID AND
+ 
+      YEAR(o.OrderDate) = YEAR(GETDATE()) - 1
+
       WHERE o.OrderID IS NULL;
