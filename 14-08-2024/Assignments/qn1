@@ -1,0 +1,97 @@
+1. Cricket Ground Boundry Sides Distances from batsman (from Pavilion End)
+        Leg Side 
+        Off Side  
+        Straight 
+        Third Man  
+    Compare two cricket grounds:
+        find the shortest distance from each ground 
+        and compare two ground based on shortest distance 
+            check which is preferred ground for batsman 
+
+    C#: CricketGround{ LegSideDistance: int, 
+        OffSideDistace: int, 
+        StraightDistance: int, 
+        ThirdManDistance: int }
+    - int FindShortestDistance()
+        among four distance find min 
+    - bool IsShortestDistanceGt(CricketGround other)     
+    
+    C3: UserOfCricketGround will compare two grounds 
+        will say which ground is preferred ground 
+
+
+
+
+=====================================================
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CricketProject
+{
+
+    class CricketGround
+    {
+        public int LegSideDistance  { get; set; }
+        public int OffSideDistance { get; set; }
+        public int StraightDistance { get; set; }
+        public int ThirdManDistance { get; set; }
+
+        public CricketGround(int legSide, int offSide , int straight , int thirdMan)
+        {
+            LegSideDistance = legSide;
+            OffSideDistance = offSide;
+            StraightDistance = straight;
+            ThirdManDistance = thirdMan;
+            
+        }
+
+        public int FindShortestDistance()
+        {
+            return Math.Min(Math.Min(Math.Min(LegSideDistance, OffSideDistance), StraightDistance), ThirdManDistance);
+
+        }
+
+        public bool IsShortestDistanceGt(CricketGround other)
+        {
+            return this.FindShortestDistance() > other.FindShortestDistance();
+        }
+
+        public bool IsShortestDistanceEq(CricketGround other)
+        {
+            return this.FindShortestDistance() == other.FindShortestDistance();
+        }
+
+        public override string ToString()
+        {
+            return $"[LegSide={LegSideDistance},OffSide={OffSideDistance},Straight={StraightDistance},ThirdMan={ThirdManDistance},ShortestDistance={FindShortestDistance()}]";
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            CricketGround groundOne = new CricketGround(50, 40 , 20 , 60);
+            CricketGround groundTwo = new CricketGround(60, 35, 30, 10);
+            if (groundOne.IsShortestDistanceGt(groundTwo))
+            {
+                Console.WriteLine($"First ground {groundOne} is less than Second ground {groundTwo}");
+            }
+            else if (groundOne.IsShortestDistanceEq(groundTwo))
+            {
+                Console.WriteLine($"First ground {groundOne} equals Second ground {groundTwo}");
+            }
+            else
+            {
+                Console.WriteLine($"First ground {groundOne} is greater than Second ground {groundTwo}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+op:First ground [LegSide=50,OffSide=40,Straight=20,ThirdMan=60,ShortestDistance=20] is less than Second ground [LegSide=60,OffSide=35,Straight=30,ThirdMan=10,ShortestDistance=10]
