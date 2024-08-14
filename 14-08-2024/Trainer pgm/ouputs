@@ -1,0 +1,74 @@
+Trainer Management System
+1. Create Trainer
+2. Read Trainer
+3. Update Trainer
+4. Delete Trainer
+5. List All Trainers
+6. Exit
+Choose an option: 5
+ID: 1, Name: Mahesh, Place: Mysore, Skill: C#
+ID: 2, Name: Sanjay, Place: Trivandrum, Skill: Management
+ID: 4, Name: Mishel, Place: Idukki, Skill: WPF
+ID: 5, Name: Dijol, Place: Kuzhur, Skill: Python
+
+Trainer Management System
+1. Create Trainer
+2. Read Trainer
+3. Update Trainer
+4. Delete Trainer
+5. List All Trainers
+6. Exit
+Choose an option: 2
+Enter Trainer ID: 2
+ID: 2
+Name: Sanjay
+Place: Trivandrum
+Skill: Management
+
+Trainer Management System
+1. Create Trainer
+2. Read Trainer
+3. Update Trainer
+4. Delete Trainer
+5. List All Trainers
+6. Exit
+Choose an option: 3
+Enter Trainer ID: 5
+Enter new Name: Dijol
+Enter new Place: Thrissur
+Enter new Skill: Python
+Trainer updated successfully.
+
+Trainer Management System
+1. Create Trainer
+2. Read Trainer
+3. Update Trainer
+4. Delete Trainer
+5. List All Trainers
+6. Exit
+Choose an option: 1
+Enter Name: Daisy
+Enter Place: Ernakulam
+Enter Skill: C#
+Trainer created successfully.
+
+Trainer Management System
+1. Create Trainer
+2. Read Trainer
+3. Update Trainer
+4. Delete Trainer
+5. List All Trainers
+6. Exit
+Choose an option: 4
+Enter Trainer ID: 6
+Trainer deleted successfully.
+
+Trainer Management System
+1. Create Trainer
+2. Read Trainer
+3. Update Trainer
+4. Delete Trainer
+5. List All Trainers
+6. Exit
+Choose an option: 6
+Exiting...
