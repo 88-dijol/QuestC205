@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace StudentProject
+{
+
+    class Student
+    {
+        public string FullName;
+        public int Mark1;
+        public int Mark2;
+
+        public void TotalMarks()
+        {
+            Console.WriteLine($"Total Marks:  { Mark1 + Mark2}");
+        }
+
+        public void AverageMarks()
+        {
+            Console.WriteLine($"Average Marks:  {(Mark1 + Mark2)/2}");
+        }
+
+        
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var Student = new Student();
+            Student.FullName = "Dijol";
+            Student.Mark1 = 90;
+            Student.Mark2 = 85;
+
+
+
+            Student.TotalMarks();
+
+            Student.AverageMarks();
+
+        }
+    }
+}
