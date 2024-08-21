@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace paramskey
+{
+    internal class Program
+    {
+        static void Add(int x, int y, params int[] numbers)
+        {
+            var sum = numbers.Sum();
+            Console.WriteLine(sum+x+y);
+        }
+        static void Main()
+        {
+            Add(1, 2);
+            Add(1, 2, 5);
+            Add(1, 2, 5, 9);
+        }
+    }
+}
+
+//Output:
+//3
+//8
+//17
