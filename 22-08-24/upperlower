@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace pgmupperandlower
+{
+
+    
+    internal class Program
+    {
+        enum ConversionResult
+        {
+            UpperCase,
+            LowerCase
+        }
+
+
+        static ConversionResult SwapCase(string text, out string result)
+        {
+            
+             if (char.IsUpper(text[0]))
+             {
+                result = text.ToLower();
+
+                return ConversionResult.LowerCase;
+
+             }
+            else
+            {
+                result = text.ToUpper();
+                return ConversionResult.UpperCase;
+            }
+
+
+            
+        }
+          
+        static void Main(string[] args)
+        {
+
+            switch (SwapCase("Hello World",out string result))
+            {
+                case ConversionResult.UpperCase:
+                    Console.WriteLine($"Result after converting to uppercase :{result}");
+                    break;
+                case ConversionResult.LowerCase:
+                    Console.WriteLine($"Result after converting to uppercase :{result}");
+                    break;
+                default:
+                    break;
+
+
+
+            }
+
+            
+
+
+        }
+    }
+}
+
+
+//Output:Result after converting to uppercase :hello world
