@@ -1,0 +1,117 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace EmployeeExam
+{
+    public class Employee
+    {
+
+        public string Name { get; set; }
+        public int Salary { get; set; }
+
+
+        public Employee(string name, int salary)
+        {
+            Name = name;
+            Salary = salary;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Employee[] employees = new Employee[18];
+
+            for (int i = 0; i < employees.Length; i++)
+            {
+                Console.Write("Enter the employee name:");
+
+                string Name = Console.ReadLine();
+
+
+                Console.Write("Enter the employee salary:");
+
+                int Salary = int.Parse(Console.ReadLine());
+
+                employees[i] = new Employee(Name, Salary);
+            }
+
+
+
+            //var sortEmployees = employees.OrderBy(emp => emp.Salary)
+            //int secondLeastSalary = sortEmployees[1].Salary;
+            //string secondLeastEmployeeName = sortEmployees[1].Name;
+
+            for (int i = 0; i < employees.Length - 1; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < employees.Length; j++)
+                {
+                    if (employees[j].Salary < employees[minIndex].Salary)
+                    {
+                        minIndex = j;
+                    }
+                }
+
+                Employee temp = employees[minIndex];
+                employees[minIndex] = employees[i];
+                employees[i] = temp;
+
+
+
+                
+            }
+            Console.WriteLine($"The second least salaried employee is {employees[1].Name} with the salary of {employees[1].Salary}");
+
+
+        }
+
+    }
+}
+
+
+//Output:
+
+//Enter the employee name:Dijol
+//Enter the employee salary:10000
+//Enter the employee name:Davis
+//Enter the employee salary:20000
+//Enter the employee name:Dinoy
+//Enter the employee salary:25000
+//Enter the employee name:Daisy
+//Enter the employee salary:15000
+//Enter the employee name:Neha
+//Enter the employee salary:2000
+//Enter the employee name:Aston
+//Enter the employee salary:50000
+//Enter the employee name:Brighty
+//Enter the employee salary:3000
+//Enter the employee name:Hancy
+//Enter the employee salary:30000
+//Enter the employee name:Angel
+//Enter the employee salary:27000
+//Enter the employee name:Aysha
+//Enter the employee salary:25000
+//Enter the employee name:Collin
+//Enter the employee salary:15000
+//Enter the employee name:Aaryeka
+//Enter the employee salary:20000
+//Enter the employee name:Athulya
+//Enter the employee salary:23000
+//Enter the employee name:Asha
+//Enter the employee salary:60000
+//Enter the employee name:Anna
+//Enter the employee salary:19000
+//Enter the employee name:Hila
+//Enter the employee salary:30000
+//Enter the employee name:Aqya
+//Enter the employee salary:50000
+//Enter the employee name:Nyla
+//Enter the employee salary:30000
+//The second least salaried employee is Brighty with the salary of 3000
+//Press any key to continue . . .
