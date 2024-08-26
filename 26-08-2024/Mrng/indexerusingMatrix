@@ -1,0 +1,121 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Indexerproject
+{
+    public class EmployeeSalaries
+
+    {
+
+        private double[,] salaryMatrix;
+
+        public EmployeeSalaries(int rows,int cols )
+
+        {
+
+            salaryMatrix = new double[rows,cols];
+
+        }
+
+        public double this[int rowIndex ,int colIndex ]
+
+        {
+
+            get
+
+            {
+
+                return salaryMatrix[rowIndex, colIndex];
+
+            }
+
+            set
+
+            {
+
+                salaryMatrix[rowIndex, colIndex] = value;
+
+            }
+
+        }
+
+    }
+
+    internal class Programs
+
+    {
+
+
+        static void Main(string[] args)
+
+        {
+
+            Console.Write("Number of  rows in the Salary Matrix:");
+
+            int rows = int.Parse(Console.ReadLine());
+
+            Console.Write("Number of  coloumss in the Salary Matrix:");
+
+            int cols = int.Parse(Console.ReadLine());
+
+            EmployeeSalaries employeeSalaries = new EmployeeSalaries(rows,cols);
+
+            Console.WriteLine($"Enter {rows}x{cols} salaries matrix row by row.");
+
+            for (int I = 0; I < rows; I++)
+
+            {
+                for (int J = 0; J < cols; J++)
+                {
+                    Console.Write($"Salary at {I} ,{J} :");
+                    employeeSalaries[I,J] = double.Parse(Console.ReadLine());
+
+                }
+
+            }
+
+            Console.WriteLine($"Salaries:");
+
+            for (int I = 0; I < rows; I++)
+
+            {
+                for (int J = 0; J < cols; J++)
+                {
+
+                    Console.Write($"{employeeSalaries[I,J]} ");
+
+
+                }
+
+            }
+
+            Console.WriteLine();
+
+        }
+
+    }
+
+}
+
+
+//op:
+//Number of  rows in the Salary Matrix:3
+//Number of  coloumss in the Salary Matrix:3
+//Enter 3x3 salaries matrix row by row.
+//Salary at 0 ,0 :50
+//Salary at 0 ,1 :20
+//Salary at 0 ,2 :70
+//Salary at 1 ,0 :40
+//Salary at 1 ,1 :30
+//Salary at 1 ,2 :21
+//Salary at 2 ,0 :80
+//Salary at 2 ,1 :89
+//Salary at 2 ,2 :56
+//Salaries:
+//50 20 70 40 30 21 80 89 56
+//Press any key to continue . . .
+
