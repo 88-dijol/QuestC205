@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace foreachpgm
+{
+    internal class Program
+    {
+        public static void Main()
+        {
+            var arr = new int[] { 1, 2, 4, 5, 8, 9 };
+
+            foreach (var item in arr)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+
+
+//op
+//1
+//2
+//4
+//5
+//8
+//9
+//Press any key to continue . . .
